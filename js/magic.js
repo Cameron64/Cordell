@@ -18,6 +18,10 @@
                 })
                 .when('/contact', {
                     templateUrl: 'Directives/contact-info.html'
+                }).
+                when('/gallary', {
+                    templateUrl: 'Directives/gallary.html',
+                    controller: 'gallary'
                 })
                 .otherwise({ redirectTo: '/' })
         }]).
