@@ -3,27 +3,35 @@
     angular.module('cole', ['ngRoute']).
 
         config(['$routeProvider', function($routeProvider) {
-            $routeProvider
-                .when('/notes', {
+            $routeProvider.
+                when('/notes', {
                 templateUrl: 'index.html'
-                })
-                .when('/', {
+                }).
+                when('/', {
                     templateUrl: 'Directives/main.html'
-                })
-                .when('/about', {
+                }).
+                when('/about', {
                     templateUrl: 'Directives/about.html'
-                })
-                .when('/resume', {
+                }).
+                when('/resume', {
                     templateUrl: 'Directives/resume.htm'
-                })
-                .when('/contact', {
+                }).
+                when('/contact', {
                     templateUrl: 'Directives/contact-info.html'
                 }).
                 when('/gallary', {
                     templateUrl: 'Directives/gallary.html',
                     controller: 'gallary'
-                })
-                .otherwise({ redirectTo: '/' })
+                }).
+                when('/theater', {
+                    templateUrl: 'Directives/theater.html',
+                    controller: 'theater'
+                }).
+                when('/video', {
+                    templateUrl: 'Directives/video.html'
+                }).
+
+                otherwise({ redirectTo: '/' })
         }]).
 
 

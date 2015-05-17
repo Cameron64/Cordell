@@ -1,4 +1,3 @@
-
 angular.module('cole').controller('gallary', function($scope,$http) {
 
     $scope.pictures = [];
@@ -11,6 +10,3 @@ angular.module('cole').controller('gallary', function($scope,$http) {
 
 
 });
-
-
-
