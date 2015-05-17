@@ -1,0 +1,167 @@
+body {
+
+    background-color: lightgray;
+
+}
+p{
+    word-wrap: break-word;
+}
+h2{
+    font-family: "Arial", Sans-serif;
+    font-size: 2vw;
+}
+.box{
+    width:80%;
+}
+
+.container{
+
+    position: absolute;
+    min-height: 100%;
+    left: 10%;
+    width: 80%;
+    background-color: white;
+
+
+}
+.header{
+    position: relative;
+    top: 60px;
+    left: 55%;
+    max-width: 40%;
+
+}
+.pic{
+    position:absolute;
+    left:0;
+    max-width: 100%;
+    max-height: 100%;
+}
+.picFront{
+    position:relative;
+    max-width: 100%;
+    max-height: 100%;
+    margin:0 auto;
+}
+.fadeOut{
+    transition: 1s;
+    opacity:0;
+    position:relative;
+    max-width: 100%;
+    max-height: 100%;
+}
+.fadeIn{
+    transition: 0.5s;
+    opacity: 1;
+    position:relative;
+}
+.beginBlank{
+    opacity:0;
+}
+.slideShow {
+
+    position: relative;
+    top: 50px;
+    left: 10%;
+    width: 70%;
+    height: 40%;
+}
+
+.tabular {
+    transition:0.5s linear all;
+    position:relative;
+
+}
+.tabular.ng-enter {
+    opacity:0;
+    left:-100px;
+
+}
+.tabular.ng-enter.ng-enter-active{
+    opacity:1;
+    left:0;
+}
+.tabular.ng-leave{
+
+    left:0;
+    opacity:1;
+}
+.tabular.ng-leave.ng-leave-active{
+    left:-100px;
+    opacity:0;
+}
+
+.center {
+    text-align:center;
+    margin: 0 auto;
+    font-size: 40px;
+    font-family:serif;
+}
+.normalSize{
+    position:relative;
+    height: 200px;
+    float: left;
+    margin: 15px;
+    right:50px;
+}
+#mini{
+    width:100%;
+}
+.miniPics1{
+    position:relative;
+
+    max-width:30%;
+    left: 8%;
+
+}
+.miniPics2{
+    position:relative;
+
+    max-width:30%;
+    left:13%;
+}
+.miniPics3{
+    position:relative;
+    left:18%;
+    max-width:30%;
+}
+a.title1, a.title2, a.title3, img.miniPics1, img.miniPics2, img.miniPics3{
+    cursor: pointer;
+}
+.title1{
+    color:black;
+    position: relative;
+    left: 8%;
+    float: left;
+
+
+}
+.title2{
+    color:black;
+    position: relative;
+    left:23%;
+    float: left;
+
+}
+.title3{
+    color:black;
+    position: relative;
+    left:35%;
+    float: left;
+
+}
+.tabs{
+
+    position: relative;
+    top: 0%;
+    left: 5%;
+    max-width: 500px;
+
+}
+.enter {
+    opacity: 0;
+}
+
+.exit {
+    opacity: 1;
+}
