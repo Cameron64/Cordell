@@ -12,7 +12,7 @@
         <li ng-class="{ active:isSet(4) }">
             <a href="#/contact" ng-click="setTab(4);">Contact</a>
         </li>
-        <li class="dropdown">
+        <li ng-class="{ 'dropdown active':isSet(5), 'dropdown':!isSet(5) }"  ng-click="setTab(5);">
             <a data-toggle="dropdown" class="dropdown-toggle">Media <b class="caret"></b></a>
             <ul class="dropdown-menu">
                 <li><a href="#/theater">Theater, TV, Film</a></li>
