@@ -1,0 +1,26 @@
+<div ng-app="ngAnimate" class="container slider" ng-mouseover="showNavPannelLeft = true; showNavPannelRight = true;" ng-mouseleave="showNavPannelLeft =false; showNavPannelRight = false">
+
+    <img ng-repeat="slide in album" ng-init="startInterval()" class="slide slide-animation"
+         ng-hide="!isCurrentSlideIndex($index)" ng-src="{{slide.image}}">
+
+
+    <div class="navPannelLeft" ng-show="showNavPannelLeft" ng-click="prevSlide()"></div>
+    <a class="arrow prev" ng-click="prevSlide()"></a>
+
+
+    <div class="navPannelRight" ng-show="showNavPannelRight" ng-click="nextSlide();"></div>
+    <a class="arrow next"  ng-click="nextSlide()"></a>
+
+    <nav class="nav navFront">
+        <div class="wrapper">
+            <ul class="dots">
+                <li class="dot" ng-repeat="slide in album">
+                    <a  ng-class="{'active':isCurrentSlideIndex($index)}"
+                       ng-click="setCurrentSlideIndex($index);"></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div ng-repeat="slide in album" ng-hide="!isCurrentSlideIndex($index)" class="slideDescription text-center"><h4>{{slide.description}}</h4></div>
+</div>
