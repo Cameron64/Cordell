@@ -1,6 +1,6 @@
 (function () {
 
-    angular.module('cole', ['ngRoute']).
+    angular.module('cole', ['ngRoute','ngAnimate']).
 
         config(['$routeProvider', function($routeProvider) {
             $routeProvider.
@@ -56,6 +56,91 @@
 
                     };
 
+                }
+            };
+        }).
+
+    directive('carousel', function(){
+        return{
+            restrict: 'E',
+            templateUrl: 'directives/slider.html',
+            controller: function($scope){
+                $scope.album = [
+                    { image: "pics/121.jpg",
+                        description: "High School Musical Theatre Awards" },
+                    { image: "pics/122.png",
+                        description: "Can I Borrow Your Phone" },
+                    { image: "pics/IMG_7200.jpg",
+                        description: "On Stage-Hebron High"}
+                ];
+                $scope.showNavPannelLeft = false;
+                $scope.showNavPannelRight = false;
+                $scope.direction = 'left';
+                $scope.currentIndex = 0;
+
+                $scope.setCurrentSlideIndex = function
+                    (index) {
+                    $scope.direction = (index >
+                        $scope.currentIndex) ? 'left' : 'right';
+                    $scope.currentIndex = index;
+                };
+
+                $scope.isCurrentSlideIndex = function (index)
+                {
+                    return $scope.currentIndex === index;
+                };
+
+                $scope.prevSlide = function () {
+                    $scope.direction = 'right';
+                    $scope.currentIndex =
+                        ($scope.currentIndex == 0) ? $scope.album.length - 1 : --$scope.currentIndex;
+
+                };
+
+                $scope.nextSlide = function () {
+                    $scope.direction = 'left';
+                    $scope.currentIndex =
+                        ($scope.currentIndex < $scope.album.length - 1) ? ++$scope.currentIndex : 0 ;
+
+                };
+
+            }
+        }
+
+    }).
+
+        animation('.slide-animation', function () {
+            return {
+                beforeAddClass: function (element, className, done) {
+                    var scope = element.scope();
+                    if (className == 'ng-hide') {
+                        var finishPoint = element.parent().width();
+
+                        if (scope.direction !== 'right') {
+                            finishPoint = -finishPoint;
+                        }
+                        TweenMax.to(element, .25, { left: finishPoint, onComplete: done });
+                    }
+                    else {
+                        done();
+                    }
+                },
+                removeClass: function (element, className, done) {
+                    var scope = element.scope();
+
+                    if (className == 'ng-hide') {
+                        element.removeClass('ng-hide');
+
+                        var startPoint = element.parent().width();
+                        if (scope.direction === 'right') {
+                            startPoint = -startPoint;
+                        }
+
+                        TweenMax.fromTo(element, 0.25, { left: startPoint }, { left: 75, onComplete: done });
+                    }
+                    else {
+                        done();
+                    }
                 }
             };
         });
