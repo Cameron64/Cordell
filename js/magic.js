@@ -136,7 +136,7 @@
                             startPoint = -startPoint;
                         }
 
-                        TweenMax.fromTo(element, 0.25, { left: startPoint }, { left: 75, onComplete: done });
+                        TweenMax.fromTo(element, 0.25, { left: startPoint }, { left: 76, onComplete: done });
                     }
                     else {
                         done();

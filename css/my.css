@@ -171,6 +171,7 @@ a.title1, a.title2, a.title3, img.miniPics1, img.miniPics2, img.miniPics3{
     height: 400px;
     overflow: hidden;
     position: relative;
+    left: 6.5%;
     background: #e6e6e6;
     border: 20px solid #FFF;
     margin-top: 20px;
@@ -182,7 +183,7 @@ a.title1, a.title2, a.title3, img.miniPics1, img.miniPics2, img.miniPics3{
     left: 0;
     height: 100%;
     width: 80%;
-    left:75px;
+    left:76px;
 }
 
 

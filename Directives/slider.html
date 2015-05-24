@@ -1,4 +1,4 @@
-<div ng-app="ngAnimate" class="container slider" ng-mouseover="showNavPannelLeft = true; showNavPannelRight = true;" ng-mouseleave="showNavPannelLeft =false; showNavPannelRight = false">
+<div class="container slider" ng-mouseover="showNavPannelLeft = true; showNavPannelRight = true;" ng-mouseleave="showNavPannelLeft =false; showNavPannelRight = false">
 
     <img ng-repeat="slide in album" ng-init="startInterval()" class="slide slide-animation"
          ng-hide="!isCurrentSlideIndex($index)" ng-src="{{slide.image}}">
