@@ -3,18 +3,21 @@ body {
     background-color: lightgray;
 
 }
-p{
+
+p {
     word-wrap: break-word;
 }
-h2{
+
+h2 {
     font-family: "Arial", Sans-serif;
     font-size: 2vw;
 }
-.box{
-    width:80%;
+
+.box {
+    width: 80%;
 }
 
-.container{
+.container {
 
     position: absolute;
     min-height: 100%;
@@ -22,152 +25,70 @@ h2{
     width: 80%;
     background-color: white;
 
-
 }
-.header{
+
+.header {
     position: relative;
     top: 60px;
     left: 55%;
     max-width: 40%;
 
 }
-.pic{
-    position:absolute;
-    left:0;
-    max-width: 100%;
-    max-height: 100%;
-}
-.picFront{
-    position:relative;
-    max-width: 100%;
-    max-height: 100%;
-    margin:0 auto;
-}
-.fadeOut{
-    transition: 1s;
-    opacity:0;
-    position:relative;
-    max-width: 100%;
-    max-height: 100%;
-}
-.fadeIn{
-    transition: 0.5s;
-    opacity: 1;
-    position:relative;
-}
-.beginBlank{
-    opacity:0;
-}
-.slideShow {
-
-    position: relative;
-    top: 50px;
-    left: 10%;
-    width: 70%;
-    height: 40%;
-}
-
-.tabular {
-    transition:0.5s linear all;
-    position:relative;
-
-}
-.tabular.ng-enter {
-    opacity:0;
-    left:-100px;
-
-}
-.tabular.ng-enter.ng-enter-active{
-    opacity:1;
-    left:0;
-}
-.tabular.ng-leave{
-
-    left:0;
-    opacity:1;
-}
-.tabular.ng-leave.ng-leave-active{
-    left:-100px;
-    opacity:0;
-}
 
 .center {
-    text-align:center;
+    text-align: center;
     margin: 0 auto;
     font-size: 40px;
-    font-family:serif;
+    font-family: serif;
 }
-.normalSize{
-    position:relative;
+
+.normalSize {
+    position: relative;
     height: 200px;
     float: left;
     margin: 15px;
-    right:50px;
+    right: 50px;
 }
-#mini{
-    width:100%;
-}
-.miniPics1{
-    position:relative;
 
-    max-width:30%;
+.frontTable {
+    position: relative;
+    width: 100%;
     left: 8%;
+}
 
-}
-.miniPics2{
-    position:relative;
-
-    max-width:30%;
-    left:13%;
-}
-.miniPics3{
-    position:relative;
-    left:18%;
-    max-width:30%;
-}
-a.title1, a.title2, a.title3, img.miniPics1, img.miniPics2, img.miniPics3{
+.miniPics {
+    position: relative;
     cursor: pointer;
-}
-.title1{
-    color:black;
-    position: relative;
-    left: 8%;
-    float: left;
-
+    width: 94%;
 
 }
-.title2{
-    color:black;
-    position: relative;
-    left:23%;
-    float: left;
+
+.miniPicsContainer {
+    width: 32%;
+    margin: 1%;
+}
+
+.title {
+    color: black;
+    cursor: pointer;
+    text-align: center;
 
 }
-.title3{
-    color:black;
-    position: relative;
-    left:35%;
-    float: left;
 
-}
-.tabs{
+.tabs {
 
     position: relative;
-    top: 0%;
+    top: 0;
     left: 5%;
     max-width: 500px;
 
 }
-.enter {
-    opacity: 0;
-}
 
-.exit {
-    opacity: 1;
-}
+/* Begin Slide Show */
+
 .slider {
     width: 800px;
-    max-width:100%;
+    max-width: 100%;
     height: 400px;
     overflow: hidden;
     position: relative;
@@ -183,24 +104,20 @@ a.title1, a.title2, a.title3, img.miniPics1, img.miniPics2, img.miniPics3{
     left: 0;
     height: 100%;
     width: 80%;
-    left:76px;
+    left: 76px;
 }
 
-
-
-
-.slideDescription{
-    position:absolute;
-    height:15%;
-    width:80%;
-    left:10%;
-    bottom:30px;
-    color:white;
-    margin-top:0;
-    z-index:1003;
-    word-wrap:normal;
+.slideDescription {
+    position: absolute;
+    height: 15%;
+    width: 80%;
+    left: 10%;
+    bottom: 30px;
+    color: white;
+    margin-top: 0;
+    z-index: 1003;
+    word-wrap: normal;
 }
-
 
 /*---------------------------------------------------------
 NAV
@@ -242,34 +159,35 @@ NAV
     background-image: url(../assets/img/paddle_next_fff.png);
 }
 
-.navPannelLeft{
-    position:absolute;
-    top:0;
-    left:0;
-    height:100%;
-    width:76px;
-    background-color:black;
-    float:left;
-    opacity:.5;
+.navPannelLeft {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 76px;
+    background-color: black;
+    float: left;
+    opacity: .5;
 }
-.navPannelRight{
-    position:absolute;
-    top:0;
-    right:0;
-    height:100%;
-    width:76px;
-    background-color:black;
-    opacity:.5;
+
+.navPannelRight {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 76px;
+    background-color: black;
+    opacity: .5;
 
 }
 
 .navPannelLeft, .navPannelRight {
-    -webkit-transition:all linear .4s;
-    transition:all linear .4s;
+    -webkit-transition: all linear .4s;
+    transition: all linear .4s;
 }
 
 .navPannelLeft.ng-hide, .navPannelRight.ng-hide {
-    opacity:0;
+    opacity: 0;
 }
 
 .navFront {
@@ -277,16 +195,16 @@ NAV
     position: absolute;
     z-index: 1002;
     bottom: -4px;
-    width:80%;
-    left:10%;
+    width: 80%;
+    left: 10%;
     height: 100px;
-    background: -webkit-linear-gradient(rgba(25, 0, 0, 0),rgba(118, 118, 118, 1)); /*Safari 5.1-6*/
+    background: -webkit-linear-gradient(rgba(25, 0, 0, 0), rgba(118, 118, 118, 1)); /*Safari 5.1-6*/
     background: -o-linear-gradient(rgba(255, 0, 0, 0), rgba(118, 118, 118, 1)); /*Opera 11.1-12*/
-    background: -moz-linear-gradient(rgba(255,0,0,0), rgba(118, 118, 118, 1)); /*Fx 3.6-15*/
-    background: linear-gradient(rgba(255,0,0,0), rgba(118, 118, 118, 1)); /*Standard*/
+    background: -moz-linear-gradient(rgba(255, 0, 0, 0), rgba(118, 118, 118, 1)); /*Fx 3.6-15*/
+    background: linear-gradient(rgba(255, 0, 0, 0), rgba(118, 118, 118, 1)); /*Standard*/
 }
 
-.nonDraggableImage{
+.nonDraggableImage {
     -webkit-user-drag: none;
 }
 
@@ -331,10 +249,8 @@ NAV
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    -webkit-transition: background-color 0.25s, border-color
-    0.25s;
-    -moz-transition: background-color 0.25s, border-color
-    0.25s;
+    -webkit-transition: background-color 0.25s, border-color 0.25s;
+    -moz-transition: background-color 0.25s, border-color 0.25s;
     transition: background-color 0.25s, border-color 0.25s;
 }
 
@@ -344,3 +260,4 @@ NAV
     border: 1px solid white;
 }
 
+/* End Slide Show */

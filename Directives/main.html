@@ -4,17 +4,37 @@
     <div  class="box">
         <carousel></carousel>
 
-        <a  href="#/theater"><img ng-click="setTab(5);" ng-src="pics/thumbs/IMG_7200.jpg" class="miniPics1"></a>
+        <table class="frontTable">
+            <tbody>
+            <tr>
+                <td class="miniPicsContainer">
+                    <a  href="#/theater"><img ng-click="setTab(5);" ng-src="pics/thumbs/IMG_7200.jpg" class="miniPics"></a>
+                </td>
+                <td class="miniPicsContainer">
+                    <a href="#/gallary"><img ng-click="setTab(6);" ng-src="pics/121.jpg" class="miniPics"></a>
+                </td>
+                <td class="miniPicsContainer">
+                    <a href="#/video"><img ng-click="setTab(7);" ng-src="pics/122.png" class="miniPics"></a>
+                </td>
+            </tr>
+            <tr>
+                <td class="center">
+                    <h2><a href="#/theater" ng-click="setTab(5);" class="title">Theatre, Film & TV</a></h2>
+                </td>
+                <td class="center">
+                    <h2><a href="#/gallary" ng-click="setTab(6);" class="title" >Gallery</a></h2>
+                </td>
+                <td class="center">
+                    <h2><a href="#/video" ng-click="setTab(7);"  class="title">Videos</a></h2>
+                </td>
+            </tr>
+            </tbody>
+        </table>
 
-        <a href="#/gallary"><img ng-click="setTab(6);" ng-src="pics/121.jpg" class="miniPics2"></a>
 
-       <a href="#/video"><img ng-click="setTab(7);" ng-src="pics/122.png" class="miniPics3"></a>
 
     </div>
-    <h2><a href="#/theater" ng-click="setTab(5);" class="title1">Theatre, Film & TV</a></h2>
 
-    <h2><a href="#/gallary" ng-click="setTab(6);" class="title2" >Gallery</a></h2>
 
-    <h2><a href="#/video" ng-click="setTab(7);"  class="title3">Videos</a></h2>
 
 
