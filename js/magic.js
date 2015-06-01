@@ -73,8 +73,7 @@
                     { image: "pics/IMG_7200.jpg",
                         description: "On Stage-Hebron High"}
                 ];
-                $scope.showNavPannelLeft = false;
-                $scope.showNavPannelRight = false;
+                $scope.showNavPannels = false;
                 $scope.direction = 'left';
                 $scope.currentIndex = 0;
 
@@ -103,6 +102,12 @@
                         ($scope.currentIndex < $scope.album.length - 1) ? ++$scope.currentIndex : 0 ;
 
                 };
+
+                $scope.fadePanels = function (bool){
+
+                    $scope.showNavPannels = bool;
+
+                }
 
             }
         }
