@@ -100,11 +100,11 @@ h2 {
 
 .slide {
     position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
     width: 80%;
     left: 76px;
+    margin: auto 0 auto;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .slideDescription {

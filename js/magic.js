@@ -66,11 +66,11 @@
             templateUrl: 'Directives/slider.html',
             controller: function($scope){
                 $scope.album = [
-                    { image: "pics/121.jpg",
-                        description: "High School Musical Theatre Awards" },
-                    { image: "pics/122.png",
-                        description: "Can I Borrow Your Phone" },
-                    { image: "pics/IMG_7200.jpg",
+                    { image: "pics/slider/headshots2.jpg",
+                        description: "Available for Hire" },
+                    { image: "pics/slider/Stage2.jpg",
+                        description: "Hebron Musical" },
+                    { image: "pics/slider/ColeI-12.jpg",
                         description: "On Stage-Hebron High"}
                 ];
                 $scope.direction = 'left';
