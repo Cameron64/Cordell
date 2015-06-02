@@ -63,7 +63,7 @@
     directive('carousel', function(){
         return{
             restrict: 'E',
-            templateUrl: 'directives/slider.html',
+            templateUrl: 'Directives/slider.html',
             controller: function($scope){
                 $scope.album = [
                     { image: "pics/121.jpg",
@@ -73,8 +73,6 @@
                     { image: "pics/IMG_7200.jpg",
                         description: "On Stage-Hebron High"}
                 ];
-                $scope.showNavPannelLeft = false;
-                $scope.showNavPannelRight = false;
                 $scope.direction = 'left';
                 $scope.currentIndex = 0;
 
@@ -103,6 +101,10 @@
                         ($scope.currentIndex < $scope.album.length - 1) ? ++$scope.currentIndex : 0 ;
 
                 };
+
+                $scope.fadeNavPanels = function(bool){
+                    $scope.showNavPanels = bool;
+                }
 
             }
         }

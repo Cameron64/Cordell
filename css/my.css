@@ -159,7 +159,7 @@ NAV
     background-image: url(../assets/img/paddle_next_fff.png);
 }
 
-.navPannelLeft {
+.navPanelLeft {
     position: absolute;
     top: 0;
     left: 0;
@@ -170,7 +170,7 @@ NAV
     opacity: .5;
 }
 
-.navPannelRight {
+.navPanelRight {
     position: absolute;
     top: 0;
     right: 0;
@@ -181,12 +181,12 @@ NAV
 
 }
 
-.navPannelLeft, .navPannelRight {
+.navPanelLeft, .navPanelRight {
     -webkit-transition: all linear .4s;
     transition: all linear .4s;
 }
 
-.navPannelLeft.ng-hide, .navPannelRight.ng-hide {
+.navPanelLeft.ng-hide, .navPanelRight.ng-hide {
     opacity: 0;
 }
 
