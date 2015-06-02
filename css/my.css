@@ -71,6 +71,7 @@ h2 {
 .miniPicsContainer {
     width: 32%;
     margin: 1%;
+    background-color: lightgrey;
 }
 
 .title {
@@ -89,6 +90,12 @@ h2 {
 
 }
 
+.aboutPic{
+
+    margin: 0 0 0 3px;
+    float:right;
+
+}
 /* Begin Slide Show */
 
 .slider {
