@@ -40,7 +40,7 @@
             return{
                 restrict: 'E',
                 templateUrl: 'Directives/tabs.html',
-                controller: function ($scope) {
+                controller: ['$scope', function ($scope) {
 
                     $scope.current = 1;
 
@@ -56,15 +56,15 @@
 
                     };
 
-                }
+                }]
             };
         }).
 
-    directive('carousel', function(){
+    directive('carousel', [function(){
         return{
             restrict: 'E',
             templateUrl: 'Directives/slider.html',
-            controller: function($scope){
+            controller: ['$scope', function($scope){
                 $scope.album = [
                     { image: "pics/slider/headshots2.jpg",
                         description: "Available for Hire" },
@@ -106,12 +106,12 @@
                     $scope.showNavPanels = bool;
                 }
 
-            }
+            }]
         }
 
-    }).
+    }]).
 
-        animation('.slide-animation', function () {
+        animation('.slide-animation', [function () {
             return {
                 beforeAddClass: function (element, className, done) {
                     var scope = element.scope();
@@ -145,7 +145,7 @@
                     }
                 }
             };
-        });
+        }]);
 
 
 })();
