@@ -4,9 +4,7 @@
 
         config(['$routeProvider', function($routeProvider) {
             $routeProvider.
-                when('/notes', {
-                templateUrl: 'index.html'
-                }).
+
                 when('/', {
                     templateUrl: 'Directives/main.html'
                 }).
@@ -40,9 +38,26 @@
             return{
                 restrict: 'E',
                 templateUrl: 'Directives/tabs.html',
-                controller: ['$scope', function ($scope) {
+                controller: ['$scope','$location', function ($scope,$location) {
 
                     $scope.current = 1;
+
+                    console.log($location.path());
+
+                    var path = $location.path();
+                    var paths = ["/","/about","/resume","/contact","/gallary","/theater","/video"];
+
+                    for(var i = 0; i < paths.length; i++){
+                        if(paths[i] == path){
+                            console.log(i);
+                            if(i > 4){
+                                $scope.current = 5;
+                            }else{
+                                $scope.current = i+1;
+                            }
+
+                        }
+                    }
 
                     $scope.isSet = function (num) {
 
