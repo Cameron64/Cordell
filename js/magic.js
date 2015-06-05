@@ -4,9 +4,7 @@
 
         config(['$routeProvider', function($routeProvider) {
             $routeProvider.
-                when('/notes', {
-                templateUrl: 'index.html'
-                }).
+
                 when('/', {
                     templateUrl: 'Directives/main.html'
                 }).
@@ -40,9 +38,26 @@
             return{
                 restrict: 'E',
                 templateUrl: 'Directives/tabs.html',
-                controller: function ($scope) {
+                controller: ['$scope','$location', function ($scope,$location) {
 
                     $scope.current = 1;
+
+                    console.log($location.path());
+
+                    var path = $location.path();
+                    var paths = ["/","/about","/resume","/contact","/gallary","/theater","/video"];
+
+                    for(var i = 0; i < paths.length; i++){
+                        if(paths[i] == path){
+                            console.log(i);
+                            if(i > 4){
+                                $scope.current = 5;
+                            }else{
+                                $scope.current = i+1;
+                            }
+
+                        }
+                    }
 
                     $scope.isSet = function (num) {
 
@@ -56,24 +71,23 @@
 
                     };
 
-                }
+                }]
             };
         }).
 
-    directive('carousel', function(){
+    directive('carousel', [function(){
         return{
             restrict: 'E',
-            templateUrl: 'directives/slider.html',
-            controller: function($scope){
+            templateUrl: 'Directives/slider.html',
+            controller: ['$scope', function($scope){
                 $scope.album = [
-                    { image: "pics/121.jpg",
-                        description: "High School Musical Theatre Awards" },
-                    { image: "pics/122.png",
-                        description: "Can I Borrow Your Phone" },
-                    { image: "pics/IMG_7200.jpg",
+                    { image: "pics/slider/headshots2.jpg",
+                        description: "Available for Hire" },
+                    { image: "pics/slider/Stage2.jpg",
+                        description: "Hebron Musical" },
+                    { image: "pics/slider/ColeI-12.jpg",
                         description: "On Stage-Hebron High"}
                 ];
-                $scope.showNavPannels = false;
                 $scope.direction = 'left';
                 $scope.currentIndex = 0;
 
@@ -103,18 +117,16 @@
 
                 };
 
-                $scope.fadePanels = function (bool){
-
-                    $scope.showNavPannels = bool;
-
+                $scope.fadeNavPanels = function(bool){
+                    $scope.showNavPanels = bool;
                 }
 
-            }
+            }]
         }
 
-    }).
+    }]).
 
-        animation('.slide-animation', function () {
+        animation('.slide-animation', [function () {
             return {
                 beforeAddClass: function (element, className, done) {
                     var scope = element.scope();
@@ -148,7 +160,7 @@
                     }
                 }
             };
-        });
+        }]);
 
 
 })();

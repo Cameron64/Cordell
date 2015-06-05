@@ -1,14 +1,14 @@
-<div class="container slider" ng-mouseover="fadePanels(true)" ng-mouseleave="fadePanels(false)">
+<div class="container slider" ng-mouseover="fadeNavPanels(true);" ng-mouseleave="fadeNavPanels(false);">
 
-    <img ng-repeat="slide in album" ng-init="startInterval()" class="slide slide-animation"
+    <img ng-repeat="slide in album" class="slide slide-animation"
          ng-hide="!isCurrentSlideIndex($index)" ng-src="{{slide.image}}">
 
 
-    <div class="navPannelLeft" ng-show="showNavPannels" ng-click="prevSlide()"></div>
+    <div class="navPanelLeft" ng-show="showNavPanels" ng-click="prevSlide()"></div>
     <a class="arrow prev" ng-click="prevSlide()"></a>
 
 
-    <div class="navPannelRight" ng-show="showNavPannels" ng-click="nextSlide();"></div>
+    <div class="navPanelRight" ng-show="showNavPanels" ng-click="nextSlide();"></div>
     <a class="arrow next"  ng-click="nextSlide()"></a>
 
     <nav class="nav navFront">
